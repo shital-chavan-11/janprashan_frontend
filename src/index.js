@@ -8,8 +8,7 @@ import "assets/styles/tailwind.css";
 // layouts
 import Admin from "layouts/Admin.js";
 import Auth from "layouts/Auth.js";
-import "./i18n"; // initialize i18next
-
+ 
 // views without layouts
 import Landing from "views/Landing.js";
 import Profile from "views/Profile.js";

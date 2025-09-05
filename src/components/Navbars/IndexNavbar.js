@@ -1,12 +1,12 @@
 /* eslint-disable */
 import React from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next"; // <-- import useTranslation
+
 import logo from "../../assets/img/logo-.jpg";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const { i18n } = useTranslation(); // <-- initialize i18n
+
 
   // function to change language
   const changeLanguage = (lang) => {
@@ -31,24 +31,7 @@ export default function Navbar(props) {
           {/* Right side: Login button + Language buttons */}
           <div className="flex items-center ml-auto space-x-2">
             {/* Language buttons */}
-            <button
-              onClick={() => changeLanguage("en")}
-              className="bg-gray-200 text-gray-800 px-3 py-1 rounded hover:bg-gray-300"
-            >
-              EN
-            </button>
-            <button
-              onClick={() => changeLanguage("hi")}
-              className="bg-gray-200 text-gray-800 px-3 py-1 rounded hover:bg-gray-300"
-            >
-              HI
-            </button>
-            <button
-              onClick={() => changeLanguage("mr")}
-              className="bg-gray-200 text-gray-800 px-3 py-1 rounded hover:bg-gray-300"
-            >
-              MR
-            </button>
+            
 
             {/* Login button */}
             <Link to="/auth/login">

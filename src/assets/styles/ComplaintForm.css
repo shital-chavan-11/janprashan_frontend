@@ -1,0 +1,252 @@
+/* ===== Complaints Page Wrapper ===== */
+.complaints-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 20px 40px; /* fixed top padding to clear navbar */
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Shared container style (form + instructions) */
+
+.cf-form-container,
+.cf-form-container_com,
+.cf-instructions-container {
+  max-width: 550px;
+  background: linear-gradient(0deg, #ffffff 0%, #f4f7fb 100%);
+  border-radius: 40px;
+  padding: 25px 35px;
+  border: 5px solid #ffffff;
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 30px 30px -20px;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: popUp 0.6s ease-out;
+}
+
+.cf-form-container:hover,
+.cf-form-container_com:hover,
+.cf-instructions-container:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 45px 45px -20px;
+}
+
+/* Flex row inside form */
+.cf-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+.cf-input {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-top: 15px;
+  box-shadow: 0 4px 12px rgba(207, 240, 255, 0.6);
+  border-inline: 2px solid transparent;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.cf-input:focus {
+  outline: none;
+  border-inline: 2px solid #12B1D1;
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(18, 177, 209, 0.4);
+}
+
+/* Half width input */
+.cf-input.half {
+  flex: 1;
+}
+.heading1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  color: #374151;
+  transition: color 0.2s ease-in-out;
+  margin-top: 10%;
+}
+.heading1:hover {
+  color: #6B7280;
+}
+/* Headings */
+.cf-form-container .heading,
+.cf-form-container_com .heading,
+.cf-instructions-container .heading {
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+  color: #374151;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dropdown styling */
+.cf-input[type="select"],
+.cf-input select,
+select.cf-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #fff url("data:image/svg+xml;utf8,<svg fill='%231089D3' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 14px center;
+  background-size: 14px;
+  border: none;
+  padding: 15px 40px 15px 20px;
+  border-radius: 15px;
+  margin-top: 15px;
+  box-shadow: 0 4px 12px rgba(207, 240, 255, 0.6);
+  border-inline: 2px solid transparent;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+select.cf-input:focus {
+  outline: none;
+  border-inline: 2px solid #12B1D1;
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(18, 177, 209, 0.4);
+}
+
+select.cf-input:hover {
+  box-shadow: 0 6px 14px rgba(18, 177, 209, 0.25);
+}
+
+/* Submit Button */
+.cf-submit-btn {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+  color: white;
+  padding: 14px 20px;
+  margin-top: 25px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.cf-submit-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, rgb(14, 120, 185) 0%, rgb(15, 160, 190) 100%);
+}
+
+.cf-submit-btn:active {
+  transform: scale(0.96);
+}
+
+/* Instructions List */
+.cf-instructions-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  counter-reset: item;
+}
+
+.cf-instructions-container li {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 14px 18px 14px 50px;
+  margin-bottom: 12px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  line-height: 1.5;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cf-instructions-container li::before {
+  content: counter(item);
+  counter-increment: item;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, rgb(16, 137, 211), rgb(18, 177, 209));
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(16, 137, 211, 0.4);
+}
+
+.cf-instructions-container li:hover {
+  background: #f5f7ff;
+  transform: translateX(6px);
+}
+
+/* Responsive: two columns on desktop */
+@media (min-width: 768px) {
+  .complaints-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .cf-form-container,
+  .cf-form-container_com
+  .cf-instructions-container {
+    flex: 1;
+    margin: 20px;
+  }
+}
+/* ComplaintForm.css */
+
+/* Wrapper: two-column layout */
+.cf-wrapper {
+  display: flex;
+  flex-direction: row;   /* side by side */
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 100vh;         /* full page height */
+}
+
+/* Left: form section */
+.cf-form-container {
+  flex: 1;
+  margin-top: 15%;
+  max-width: 50%;    
+  height: 80%;    /* take half width */
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cf-form-container_com{
+  flex: 1;
+  margin-top: 2%;
+  max-width: 50%;    
+  height: 80%;    /* take half width */
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Right: video section */
+.cf-video-container {
+  flex: 1;
+  max-width: 50%; 
+   margin-top: 15%;       /* take half width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+}
+

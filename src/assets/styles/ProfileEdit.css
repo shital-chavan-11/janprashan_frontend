@@ -1,0 +1,92 @@
+.container-profile-edit {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 25px;
+  background: linear-gradient(0deg, #ffffff 0%, #f4f7fb 100%);
+  border-radius: 40px;
+  border: 5px solid #ffffff;
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 30px 30px -20px;
+}
+
+.profile-edit-card {
+  position: relative;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.profile-image-wrapper {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 10px 15px -5px;
+}
+
+.profile-edit-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1089d3;
+  margin-bottom: 20px;
+}
+
+.profile-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-edit {
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  box-shadow: #cff0ff 0px 8px 8px -4px;
+  font-size: 14px;
+}
+
+.input-edit:focus {
+  outline: none;
+  border: 2px solid #12b1d1;
+}
+
+.button-edit,
+.button-verify {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-edit {
+  background: linear-gradient(45deg, #1089d3 0%, #12b1d1 100%);
+  color: white;
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 15px 10px -10px;
+}
+
+.button-verify {
+  background: linear-gradient(45deg, #28a745 0%, #34d058 100%);
+  color: white;
+  box-shadow: rgba(72, 187, 120, 0.88) 0px 15px 10px -10px;
+}
+
+.button-edit:hover,
+.button-verify:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 20px 10px -15px;
+}
+
+.button-edit:active,
+.button-verify:active {
+  transform: scale(0.95);
+}

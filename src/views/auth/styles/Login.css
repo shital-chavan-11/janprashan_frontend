@@ -1,0 +1,155 @@
+/* --- FORCE clean white card + subtle bluish glow --- */
+.login-container {
+  background-color: #fff !important;
+  background-image: none !important;   /* kill the gradient */
+  border: 5px solid #fff;               /* keep white rim */
+
+  /* ✅ subtle blue shadow outside */
+  box-shadow: 0 6px 20px rgba(16,137,211,0.25) !important;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.login-container:hover {
+  /* ✅ stronger blue glow on hover */
+  box-shadow: 0 14px 36px rgba(16,137,211,0.45) !important;
+}
+
+/* kill any pseudo-elements adding gradients/glow */
+.login-container::before,
+.login-container::after {
+  content: none !important;
+}
+
+/* --- Remove this block, it kills shadows ---
+.login-container,
+.login-container:hover {
+  -webkit-box-shadow: inherit !important;
+  box-shadow: inherit !important;
+}
+*/
+
+.login-heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: rgb(16, 137, 211);
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* Login Form */
+.login-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Login Inputs: match register page style --- */
+.login-input {
+width: 100%;
+  height: 100%;
+  max-height: 500px;
+  background: #ffffff;
+  border: none;
+  padding: 12px 12px;
+  border-radius: 20px;
+  margin-top: 5px;
+  box-shadow: #cff0ff 0px 8px 8px -4px;
+  border-inline: 2px solid transparent;
+}
+
+.login-input::placeholder {
+  color: #aaa;
+}
+
+/* Hover / focus: subtle blue glow */
+.login-input:hover,
+.login-input:focus {
+  outline: none;
+  border-inline: 2px solid #12B1D1; /* subtle blue accent */
+  box-shadow: 0 6px 20px rgba(16, 137, 211, 0.25); /* subtle glow */
+}
+
+/* Stronger glow on focus */
+.login-input:focus {
+  box-shadow: 0 14px 36px rgba(16, 137, 211, 0.45);
+}
+
+/* Forgot + reset inside login */
+.forgot-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.forgot-section a {
+  color: #0099ff;
+  text-decoration: none;
+}
+.reset-btn {
+  font-size: 12px;
+  background: transparent;
+  border: none;
+  color: #0099ff;
+  cursor: pointer;
+}
+
+/* Sign in button */
+.login-button {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+  color: #fff;
+  padding-block: 10px;
+  margin: 5px auto 5px;
+  border-radius: 20px;
+  
+  box-shadow: 0 20px 25px -10px rgba(133, 189, 215, 0.88);
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+.login-button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 23px 10px -20px;
+}
+.login-button:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 15px 10px -10px;
+}
+
+.login-container.view-link:hover {
+  color: #2563eb;
+}
+
+/* Optional: style for select input if used on login page */
+.select-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 12px;
+  border: 2px solid transparent;
+  box-shadow: #cff0ff 0px 8px 8px -4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: #aaa;
+}
+
+.select-input:hover,
+.select-input:focus {
+  border-color: rgb(16, 137, 211);
+  outline: none;
+  box-shadow: 0 6px 20px rgba(16, 137, 211, 0.25);
+}
+
+.select-input option:hover {
+  color: rgb(16, 137, 211);
+  background-color: #f0faff;
+}
+
+.select-input option:checked {
+  color: rgb(16, 137, 211);
+}

@@ -1,0 +1,124 @@
+.text-box-container {
+  max-width: 500px;
+  min-height: 280px;
+  background: linear-gradient(to bottom, #ffffff, #f4f7fb);
+  border-radius: 30px;
+  border: 2px solid white;
+  box-shadow: 0 20px 25px -10px rgba(133, 189, 215, 0.88);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  opacity: 0; /* animation will handle visibility */
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.text-box-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  text-align: center;
+}
+
+.button-wrapper {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dive-button {
+  padding: 12px 24px;
+  font-weight: bold;
+  background: linear-gradient(to right, #1089d3, #12b1d1);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -5px rgba(133, 189, 215, 0.88);
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dive-button:hover {
+  transform: scale(1.05);
+}
+
+.dive-button:active {
+  transform: scale(0.95);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.feature-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 1rem auto;
+  box-shadow: 
+    0 8px 20px rgba(135, 206, 250, 0.5),  /* soft blue glow */
+    0 12px 28px rgba(0, 0, 0, 0.15);      /* subtle dark shadow */
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* On hover → keep the same shadow, no pop-up */
+.feature-box:hover {
+  box-shadow: 
+    0 8px 20px rgba(135, 206, 250, 0.5),
+    0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Glitter shimmer effect (bottom-only) */
+@keyframes glitter {
+  0% { box-shadow: 0 12px 20px rgba(173, 216, 230, 0.7), 0 18px 35px rgba(135, 206, 250, 0.5), 0 12px 28px rgba(0, 0, 0, 0.18); }
+  50% { box-shadow: 0 14px 25px rgba(173, 216, 230, 1), 0 20px 40px rgba(135, 206, 250, 0.8), 0 15px 32px rgba(0, 0, 0, 0.22); }
+  100% { box-shadow: 0 12px 20px rgba(173, 216, 230, 0.7), 0 18px 35px rgba(135, 206, 250, 0.5), 0 12px 28px rgba(0, 0, 0, 0.18); }
+}
+
+.feature-box .icon {
+  background: #f1f5f9;
+  color: #3b82f6;
+  font-size: 1.8rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box .title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.feature-box .description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 1.25rem;
+}
+
+.feature-box .view-link {
+  font-weight: 600;
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.feature-box .view-link:hover {
+  color: #2563eb;
+}

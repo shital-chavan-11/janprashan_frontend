@@ -1,0 +1,177 @@
+/* Wrapper for two-column layout */
+.login-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  padding-top: 5px;
+}
+
+/* Left column (form) */
+.login-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+}
+
+/* Right column (image) */
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Video size (similar to GIF or form box) */
+.login-video {
+  width: 550px;          /* same as your gif dimension */
+  height: 550px;
+  object-fit: contain;   /* keep clarity, no stretch */
+  border-radius: 20px;   /* optional, match form style */
+}
+
+
+.login-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+/* Form container */
+.login-container {
+  max-width: 450px;
+  width: 100%;
+  background: linear-gradient(0deg, #ffffff 0%, #f4f7fb 100%);
+  border-radius: 40px;
+  padding: 40px 50px;
+  border: 5px solid #ffffff;
+
+  /* Inner shadows */
+  box-shadow: rgba(133, 189, 215, 0.88) 0px 30px 60px -12px inset,
+              rgba(141, 238, 255, 0.88) 0px 18px 36px -18px inset;
+
+  /* Smooth animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: pop-up + outer glow */
+.login-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 40px -10px rgba(16, 137, 211, 0.5),
+              0 15px 30px -15px rgba(141, 238, 255, 0.6);
+}
+
+/* Title */
+.login-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+.login-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Input */
+.login-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+/* Button */
+.login-button {
+  background: #4a90e2;
+  color: #fff;
+  font-size: 14px;
+  padding: 12px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background: #357abd;
+}
+
+/* Extra text section */
+.login-extra {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+}
+
+.resend-btn {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+.resend-btn:hover {
+  text-decoration: underline;
+}
+
+.back-link {
+  color: #666;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* OTP input container */
+.otp-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+/* Each OTP box */
+.otp-input-box {
+  width: 50px;
+  height: 55px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.otp-input-box:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+}

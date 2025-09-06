@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../assets/styles/TextBox.css";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
@@ -54,10 +55,11 @@ export default function Index() {
                 </p>
 
                 <div className="button-wrapper">
-                  <a href="auth/login" className="dive-button">
-                    Dive in
-                  </a>
-                </div>
+  <Link to="/auth/login" className="dive-button">
+    Dive in
+  </Link>
+</div>
+
               </div>
             )}
           </div>

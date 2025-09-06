@@ -24,21 +24,35 @@ function Login() {
         localStorage.setItem("is_superuser", data.is_superuser ? "true" : "false");
         localStorage.setItem("is_staff", data.is_staff ? "true" : "false");
         localStorage.setItem("isLoggedIn", "true");
-
-        Swal.fire("Success", data.message || "Login successful!", "success").then(() => {
-          if (data.is_superuser || data.is_staff) {
-            history.push("/admin/admindashboard");
-          } else {
-            history.push("/admin/dashboard");
-          }
-        });
-      } else {
-        Swal.fire("Error", data.error || data.detail || "Invalid credentials", "error");
-      }
-    } catch (err) {
-      console.error("Login error:", err);
-      Swal.fire("Error", "Something went wrong!", "error");
+Swal.fire({
+    title: "Success",
+    text: data.message || "Login successful!",
+    icon: "success",
+    confirmButtonColor: "#1089d3", // 👈 blue confirm button
+  }).then(() => {
+    if (data.is_superuser || data.is_staff) {
+      history.push("/admin/admindashboard");
+    } else {
+      history.push("/admin/dashboard");
     }
+  });
+} else {
+  Swal.fire({
+    title: "Error",
+    text: data.error || data.detail || "Invalid credentials",
+    icon: "error",
+    confirmButtonColor: "#1089d3", // 👈 also blue for error alerts
+  });
+}
+} catch (err) {
+  console.error("Login error:", err);
+  Swal.fire({
+    title: "Error",
+    text: "Something went wrong!",
+    icon: "error",
+    confirmButtonColor: "#1089d3", // 👈 blue button here too
+  });
+}
   };
 
   return (

@@ -19,7 +19,7 @@ export default function HeaderStats() {
 
   const fetchStats = () => {
     setLoading(true);
-    fetch("http://localhost:8000/api/auth/complaints/stats/", {
+    fetch("https://janprashna-backend.onrender.com/api/auth/complaints/stats/", {
       method: "GET",
       credentials: "include", // if using cookie JWT
       headers: {

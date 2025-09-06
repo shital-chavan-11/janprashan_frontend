@@ -54,7 +54,7 @@ export default function Index() {
                 </p>
 
                 <div className="button-wrapper">
-                  <a href="auth/Login.js" className="dive-button">
+                  <a href="auth/login" className="dive-button">
                     Dive in
                   </a>
                 </div>

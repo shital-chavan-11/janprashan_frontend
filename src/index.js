@@ -11,7 +11,7 @@ import Auth from "layouts/Auth.js";
  
 // views without layouts
 import Landing from "views/Landing.js";
-import Profile from "views/Profile.js";
+// import Profile from "views/Profile.js";
 import Index from "views/Index.js";
 
 // private route
@@ -25,7 +25,7 @@ root.render(
       <Switch>
         {/* Protected routes */}
         <Route path="/admin" component={Admin} />
-        <PrivateRoute path="/profile" component={Profile} />
+        {/* <PrivateRoute path="/profile" component={Profile} /> */}
 
         {/* Public routes */}
         <Route path="/auth" component={Auth} />

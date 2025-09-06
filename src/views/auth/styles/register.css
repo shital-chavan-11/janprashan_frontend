@@ -41,7 +41,6 @@
   border-radius: 40px;
   padding: 40px 50px;
   border: 5px solid #ffffff;
-  box-shadow: 0 20px 25px -10px rgba(133, 189, 215, 0.88);
   text-align: center;
 
   /* Smooth animation */
@@ -51,7 +50,7 @@
 /* Hover pop-up + glowing shadow */
 .container1:hover {
   transform: scale(1.03); /* pop-up */
-  box-shadow: 0 25px 40px -10px rgba(16, 137, 211, 0.5); /* light blue glow */
+   
 }
 
 

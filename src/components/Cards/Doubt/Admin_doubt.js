@@ -102,7 +102,7 @@ export default function AdminDoubts() {
     <div className="cf-wrapper_doubt">
       {/* Page Container */}
       <div className="cf-form-container_doubt">
-        <h2 className="heading1">📚 Admin Doubts</h2>
+        <h2 className="heading1">Admin Doubts</h2>
 
         {/* Filters */}
         <div className="filters-row">

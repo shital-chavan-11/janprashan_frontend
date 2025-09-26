@@ -11,12 +11,12 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.11.0",
     "chart.js": "^4.5.0",
-    "i18next": "^25.4.2",
+    "i18next": "23.10.1",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.528.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^15.7.3",
+    "react-i18next": "13.5.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
@@ -24,8 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "npm install --legacy-peer-deps && react-scripts build",
-  "start": "react-scripts start",
+    "build": "react-scripts build",
+    "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -53,6 +53,6 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
-    "typescript": "^4.9.5"
+    "typescript": "4.9.5"
   }
 }
